@@ -1,7 +1,7 @@
 :root{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
-    max-width: 1280px;
+    max-width: 1366px;
     background-color: #fff;
     margin: 0 auto;
 }
@@ -12,7 +12,7 @@ body{
 }
 
 .page-container{
-
+margin-bottom: 1px;
 }
 
 .nav{
@@ -20,9 +20,9 @@ body{
 }
 nav{
     background-color: #222222;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: flex;/*flexbox convertable*/
+    flex-direction: row;/*direction of menu is in row */
+    justify-content: space-between;/*horizon alignment*/
 }
 nav .logo{
     display: flex;
@@ -37,7 +37,7 @@ nav .logo img{
 
 div .logo .title{
     color: white;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: bold
     ;padding: 20px;
 }
@@ -52,16 +52,17 @@ nav ul{
 nav ul li{
     color: white;
     padding: 20px 40px ;
-    background-color: rgb(41, 39, 39);
+    background-color: rgb(37, 35, 35);
 }
 
 nav ul li.active{
     background-color: rgb(59, 59, 57);
 }
+
 nav ul li:hover{
     background-color: rgb(12, 12, 12);
 }
-
+ 
 nav ul li a{
     color: white;
     text-decoration: none;
@@ -82,5 +83,103 @@ nav ul li a{
 
 /*Phone*/
 @media all and (max-width: 600px) {
+    nav{
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+
+    }
+    nav ul li{
+        text-align: center;
+    }
     
+}
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    text-align: center;
+    background-color: rgb(37, 35, 35);
+    background-image: url(https://picsum.photos/id/171/900/500);
+}
+
+@keyframes appear{
+    from{
+        opacity: 0;
+        top: -100px;
+    }
+    to{
+        opacity: 1;
+        top: 0.0;
+    }
+}
+.banner .heading{
+    flex: 1;
+    justify-self: center;
+    columns: white;
+    font-size: 40px;
+    font-weight: bold;
+    position: relative;
+    animation: appear 1s ease-in-out 0s forwards;
+}
+.banner .heading small{
+    font-size: 20px;
+}
+
+.maintext{
+    font-size: 15px;
+    padding: 10px;
+}
+.subtext{
+    display: flex;
+}
+.subtext div{
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    color: white;
+}
+.subtext .red{
+    background-color: rgb(231, 49, 49);
+}
+.subtext .yellow{
+background-color: rgb(233, 233, 62);
+}
+.subtext .green{
+    background-color: rgb(68, 233, 68);
+}
+
+.qoute{
+    display: block;
+    background-color: #eeeeee;
+    padding: 50px;
+    text-align: center;
+    font-style: italic;
+}
+
+.quote::before {
+    display: inline-block;
+    content: open-quote;
+    color: wheat;
+    font-size: 32px;
+}
+
+
+
+.footer{
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(14, 12, 12);
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
