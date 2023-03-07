@@ -1,0 +1,86 @@
+:root{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    max-width: 1280px;
+    background-color: #fff;
+    margin: 0 auto;
+}
+body{
+    margin: 0px;
+    background-color: white;
+    border: 1px solid #ddd;
+}
+
+.page-container{
+
+}
+
+.nav{
+
+}
+nav{
+    background-color: #222222;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+}
+nav .logo img{
+    width: 56px;
+    height: 56px;
+    padding: 8px;
+    border-radius: 50%;
+}
+
+div .logo .title{
+    color: white;
+    font-size: 20px;
+    font-weight: bold
+    ;padding: 20px;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start ;
+    list-style: none;
+}
+nav ul li{
+    color: white;
+    padding: 20px 40px ;
+    background-color: rgb(41, 39, 39);
+}
+
+nav ul li.active{
+    background-color: rgb(59, 59, 57);
+}
+nav ul li:hover{
+    background-color: rgb(12, 12, 12);
+}
+
+nav ul li a{
+    color: white;
+    text-decoration: none;
+
+}
+
+/*Media Queries*/
+/*Tablet*/
+@media all and (max-width: 800px) {
+    nav{
+        justify-content: flex-start;
+    }
+    nav ul{
+        justify-content: space-between;
+    }
+    
+}
+
+/*Phone*/
+@media all and (max-width: 600px) {
+    
+}
